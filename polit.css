@@ -1,0 +1,69 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+.header {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+.header nav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Main Content */
+.content {
+    padding: 2rem;
+}
+
+.privacy-policy h2 {
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.privacy-policy h3 {
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.privacy-policy p, .privacy-policy ul {
+    margin-bottom: 1rem;
+}
+
+.privacy-policy ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

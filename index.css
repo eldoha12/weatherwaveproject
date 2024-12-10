@@ -47,20 +47,21 @@ body {
   }
   
   .login-button {
-    width: 100%;
-    background: #1e90ff;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
     color: white;
-    padding: 10px;
+    background-color: #007bff; /* Couleur de fond */
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .login-button:hover {
-    background: #1c86ee;
-  }
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+}
   
   .register-link {
     margin-top: 10px;

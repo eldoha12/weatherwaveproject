@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechercher la Météo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Vous pouvez ajouter un fichier CSS externe -->
+</head>
+<body>
+    <div class="container">
+        <h1>Rechercher la Météo</h1>
+        <form id="weatherForm">
+            <label for="city">Nom de la ville :</label>
+            <input type="text" id="city" name="city" placeholder="Entrez le nom d'une ville" required>
+            <button type="submit">Rechercher</button>
+        </form>
+
+        <div id="weatherResult">
+            <!-- Résultats de la météo s'afficheront ici -->
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour récupérer la météo d'une ville via l'API OpenWeatherMap
+        const form = document.getElementById('weatherForm');
+        const weatherResult = document.getElementById('weatherResult');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const city = document.getElementById('city').value;
+            const apiKey = 'VOTRE_CLÉ_API'; // Remplacez ceci par votre propre clé API
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=fr&units=metric`;
+
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+
+                if (data.cod === 200) {
+                    weatherResult.innerHTML = `
+                        <h2>Météo pour ${data.name}, ${data.sys.country}</h2>
+                        <p><strong>Température :</strong> ${data.main.temp} °C</p>
+                        <p><strong>Description :</strong> ${data.weather[0].description}</p>
+                        <p><strong>Humidité :</strong> ${data.main.humidity} %</p>
+                        <p><strong>Vitesse du vent :</strong> ${data.wind.speed} m/s</p>
+                    `;
+                } else {
+                    weatherResult.innerHTML = `<p>Ville introuvable. Essayez une autre ville.</p>`;
+                }
+            } catch (error) {
+                weatherResult.innerHTML = `<p>Erreur lors de la récupération des données. Essayez plus tard.</p>`;
+            }
+
+        
+        });
+    </script>
+    <h1>Bonjour </h1>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(135, 206, 250); /* Bleu ciel */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .weather-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #007bff;
+  }
+  
+  header p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+  }
+  
+  .weather-icon img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .weather-details h2 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .weather-details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .weather-container {
+      padding: 15px;
+    }
+  
+    header h1 {
+      font-size: 24px;
+    }
+  
+    .weather-details h2 {
+      font-size: 18px;
+    }
+  
+    .weather-details p {
+      font-size: 14px;
+    }
+  }
+  

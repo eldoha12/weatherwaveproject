@@ -1,4 +1,4 @@
-/* Styles généraux */
+/* Styles de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -51,10 +51,20 @@ body {
     font-size: 16px;
   }
   
+  #error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
   footer {
     margin-top: 20px;
     font-size: 12px;
     color: #888;
+  }
+  
+  /* Cacher les erreurs par défaut */
+  .hidden {
+    display: none;
   }
   
   /* Responsive */

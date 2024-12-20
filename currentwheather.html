@@ -14,19 +14,21 @@
     </header>
     <div class="weather-info">
       <div class="weather-icon">
-        <img src="https://via.placeholder.com/100" alt="Icône météo" id="weather-icon">
+        <img src="" alt="Icône météo" id="weather-icon">
       </div>
       <div class="weather-details">
-        <h2 id="location">Ville, Pays</h2>
+        <h2 id="location">Chargement...</h2>
         <p id="description">Description météo</p>
         <p id="temperature">Température : -- °C</p>
         <p id="humidity">Humidité : --%</p>
+        <p id="error-message" class="hidden">Impossible de récupérer la météo. Essayez à nouveau plus tard.</p>
       </div>
     </div>
     <footer>
       <p>Powered by WeatherWave</p>
     </footer>
   </div>
+
   <script src="currentwheather.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 
 **Scrum Master** : Mr. OTHMANE MEKOUAR - EL FADILI DOHA
 **Développeurs** : ACHRAF ZEROUALI - OUTALEB HAYAT - HAMZA IDRISSI
+=====================
 
 WeatherWave est une application météo dynamique et réactive qui fournit aux utilisateurs des mises à jour météorologiques en temps réel, des prévisions, et des fonctionnalités supplémentaires liées à la météo. Le projet est conçu pour offrir une expérience visuellement attrayante et conviviale sur les plateformes mobiles et de bureau.
 

@@ -1,34 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherWave - Météo Actuelle</title>
-  <link rel="stylesheet" href="currentwheather.css">
+  <title>Voir La Météo Actuelle Dans Votre Ville</title>
+  <link rel="stylesheet" href="./currentwheather.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="weather-container">
+  <div class="app-container">
     <header>
-      <h1>WeatherWave</h1>
-      <p>Météo actuelle pour votre emplacement</p>
+      <h1>Météo Actuelle</h1>
     </header>
-    <div class="weather-info">
-      <div class="weather-icon">
-        <img src="" alt="Icône météo" id="weather-icon">
+
+    <main>
+      <div class="search-bar">
+        <input type="text" id="city-input" placeholder="Entrez votre ville..." />
+        <button id="search-btn">
+          <i class="fas fa-search"></i> Rechercher
+        </button>
       </div>
-      <div class="weather-details">
-        <h2 id="location">Chargement...</h2>
-        <p id="description">Description météo</p>
-        <p id="temperature">Température : -- °C</p>
-        <p id="humidity">Humidité : --%</p>
-        <p id="error-message" class="hidden">Impossible de récupérer la météo. Essayez à nouveau plus tard.</p>
+
+      <div id="weather-result" class="weather-card hidden">
+        <h2 id="city-name">Ville</h2>
+        <div class="weather-details">
+          <img id="weather-icon" alt="Icône météo" />
+          <div>
+            <p id="temperature">-- °C</p>
+            <p id="weather-description">Conditions météo</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
+
     <footer>
-      <p>Powered by WeatherWave</p>
+      <p>© 2024 WeatherWave </p>
     </footer>
   </div>
 
-  <script src="currentwheather.js"></script>
+  <script src="./currentwheather.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

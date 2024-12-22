@@ -1,75 +1,34 @@
-const apiKey = 'd5922e4d4b67242e4c7dd35c130a49f8'; // Remplacez par votre clé API
-const weatherIcon = document.getElementById('weather-icon');
-const locationEl = document.getElementById('location');
-const descriptionEl = document.getElementById('description');
-const temperatureEl = document.getElementById('temperature');
-const humidityEl = document.getElementById('humidity');
-const errorMessage = document.getElementById('error-message');
+const apiKey = "d5922e4d4b67242e4c7dd35c130a49f8"; // Remplacez par votre clé API
 
-/**
- * Obtenir les données météo à partir de l'API OpenWeatherMap.
- */
-async function getWeather() {
-  try {
-    // Vérifier si la géolocalisation est disponible
-    if (!navigator.geolocation) {
-      showError('La géolocalisation n\'est pas disponible sur votre appareil.');
-      return;
-    }
-
-    // Obtenir la position de l'utilisateur
-    const position = await getUserLocation();
-    const { latitude, longitude } = position.coords;
-
-    // Construire l'URL de l'API avec les coordonnées
-    const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric&lang=fr`;
-
-    // Récupérer les données météo
-    const response = await fetch(apiURL);
-    if (!response.ok) throw new Error('Erreur lors de la récupération des données météo');
-
-    const data = await response.json();
-    updateWeatherUI(data);
-  } catch (error) {
-    showError(error.message);
+document.getElementById("search-btn").addEventListener("click", async () => {
+  const city = document.getElementById("city-input").value;
+  if (!city) {
+    alert("Veuillez entrer le nom d'une ville.");
+    return;
   }
-}
 
-/**
- * Obtenir la position de l'utilisateur.
- */
-function getUserLocation() {
-  return new Promise((resolve, reject) => {
-    navigator.geolocation.getCurrentPosition(resolve, reject);
-  });
-}
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=fr&appid=${apiKey}`;
 
-/**
- * Mettre à jour l'interface avec les données météorologiques.
- */
-function updateWeatherUI(data) {
-  const { name, sys, weather, main } = data;
-  
-  locationEl.textContent = `${name}, ${sys.country}`;
-  descriptionEl.textContent = weather[0].description;
-  temperatureEl.textContent = `Température : ${main.temp} °C`;
-  humidityEl.textContent = `Humidité : ${main.humidity}%`;
+  console.log("URL de l'API : ", url); // Vérifie l'URL générée
 
-  // Mettre à jour l'icône météo
-  const iconCode = weather[0].icon;
-  weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  try {
+    const response = await fetch(url);
+    console.log("Réponse de l'API : ", response); // Vérifie si la réponse est correcte
+    if (!response.ok) {
+      throw new Error("Ville introuvable.");
+    }
+    const data = await response.json();
+    console.log("Données météo : ", data); // Vérifie les données récupérées
 
-  // Cacher le message d'erreur s'il existe
-  errorMessage.classList.add('hidden');
-}
+    // Mise à jour de l'interface utilisateur
+    document.getElementById("city-name").textContent = `${data.name}, ${data.sys.country}`;
+    document.getElementById("temperature").textContent = `${data.main.temp}°C`;
+    document.getElementById("weather-icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    document.getElementById("weather-description").textContent = data.weather[0].description;
+    document.getElementById("weather-result").classList.remove("hidden");
 
-/**
- * Afficher un message d'erreur dans l'interface utilisateur.
- */
-function showError(message) {
-  errorMessage.textContent = message;
-  errorMessage.classList.remove('hidden');
-}
-
-// Lancer la récupération des données météo lorsque la page est chargée
-window.onload = getWeather;
+  } catch (error) {
+    console.error("Erreur de récupération des données météo : ", error);
+    alert(error.message);
+  }
+});

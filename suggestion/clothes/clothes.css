@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#clothes-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+#gender-selection {
+    margin-bottom: 20px;
+}
+
+#gender-selection button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gender-selection button:hover {
+    background-color: #45a049;
+}
+
+#weather-display {
+    margin-bottom: 20px;
+}
+
+#weather-image {
+    width: 100px;
+    height: 100px;
+}
+
+#clothing-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.clothing-item {
+    text-align: center;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+.clothing-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.clothing-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.clothing-item p {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    color: #555;
+}

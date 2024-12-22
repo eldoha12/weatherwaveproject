@@ -1,15 +1,4 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #87ceeb, #1e90ff);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-  }
-  
+
   .login-container {
     background: white;
     padding: 30px;

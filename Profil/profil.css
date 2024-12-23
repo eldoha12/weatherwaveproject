@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"], select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.delete-account {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-account:hover {
+    background-color: #d32f2f;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-picture input {
+    display: none;
+}
+
+.profile-picture label {
+    cursor: pointer;
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.light-theme {
+    background: linear-gradient(to bottom, #87CEEB, #f7f7f7);
+    color: #333;
+}
+
+.dark-theme {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: #fff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

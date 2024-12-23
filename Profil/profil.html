@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
+<body id="body">
+    <div class="container">
+        <h2>Mon Profil</h2>
+
+        <!-- Formulaire pour la gestion du profil -->
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <!-- Photo de profil -->
+            <div class="profile-picture">
+                <img src="default-avatar.png" alt="Photo de Profil" id="profile-img">
+                <input type="file" name="profile-picture" id="profile-picture" onchange="previewImage(event)">
+                <label for="profile-picture">Changer la photo</label>
+            </div>
+
+            <!-- Nom de l'utilisateur -->
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" value="John Doe" required>
+
+            <!-- Email de l'utilisateur -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+            <!-- Date de naissance -->
+            <label for="dob">Date de naissance</label>
+            <input type="date" id="dob" name="dob" value="1990-01-01" required>
+
+            <!-- Numéro de téléphone -->
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" name="phone" value="+33 123 456 789" required>
+
+            <!-- Adresse -->
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" value="10 Rue Exemple, Paris" required>
+
+            <!-- Mot de passe -->
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Nouveau mot de passe">
+
+            <!-- Choisir le thème -->
+            <label for="theme">Thème</label>
+            <select id="theme" name="theme" onchange="toggleTheme()">
+                <option value="light">Clair</option>
+                <option value="dark">Sombre</option>
+            </select>
+
+            <!-- Enregistrer les modifications -->
+            <button type="submit">Enregistrer les modifications</button>
+        </form>
+
+        <!-- Lien vers la suppression du compte -->
+        <button class="delete-account" onclick="confirmDelete()">Supprimer mon compte</button>
+    </div>
+
+    <script>
+        // Fonction pour afficher la photo sélectionnée
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const output = document.getElementById('profile-img');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        // Fonction pour confirmer la suppression du compte
+        function confirmDelete() {
+            const confirmDelete = confirm("Êtes-vous sûr de vouloir supprimer votre compte ?");
+            if (confirmDelete) {
+                // Logique de suppression du compte à implémenter ici
+                alert("Votre compte a été supprimé.");
+            }
+        }
+
+        // Fonction pour basculer entre le mode clair et sombre
+        function toggleTheme() {
+            const theme = document.getElementById("theme").value;
+            const body = document.getElementById("body");
+            if (theme === "dark") {
+                body.classList.add("dark-theme");
+                body.classList.remove("light-theme");
+            } else {
+                body.classList.add("light-theme");
+                body.classList.remove("dark-theme");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions d'Activités - Guide Météo</title>
+    <link rel="stylesheet" href="activites.css">
+</head>
+<body>
+    <div class="activity-container">
+        <h1>Suggestions d'Activités</h1>
+        <p>Choisissez une activité en fonction de la météo actuelle :</p>
+
+        <div class="activity-options">
+            <!-- Activité ensoleillée -->
+            <div class="activity-card" id="sunny">
+                <img src="../boisson/public/assets/sunny.png" alt="Soleil" class="activity-img">
+                <h3>Activités ensoleillées</h3>
+                <p>Profitez du beau temps pour faire une promenade, une randonnée, ou aller à la plage !</p>
+                <!-- Image spécifique à l'activité ensoleillée (tennis) -->
+                <img src="./public/assets/tennis.png" alt="Tennis" class="activity-img">
+            </div>
+            
+            <!-- Activité pluvieuse -->
+            <div class="activity-card" id="rainy">
+                <img src="../boisson/public/assets/rainy.png" alt="Pluie" class="activity-img">
+                <h3>Activités pluvieuses</h3>
+                <p>Lire un livre, regarder un film ou faire du bricolage à l'intérieur.</p>
+                <!-- Image pour lire un livre -->
+                <img src="./public/assets/reading.png" alt="Lecture" class="activity-img">
+                <!-- Image pour regarder un film -->
+                <img src="./public/assets/movie.png" alt="Film" class="activity-img">
+                <!-- Image pour faire du bricolage -->
+                <img src="./public/assets/crafting.png" alt="Bricolage" class="activity-img">
+            </div>
+            
+            <!-- Activité nuageuse -->
+            <div class="activity-card" id="cloudy">
+                <img src="../boisson/public/assets/cloudy.png" alt="Nuages" class="activity-img">
+                <h3>Activités nuageuses</h3>
+                <p>Profitez du temps doux pour faire une sortie au musée ou une activité sportive en extérieur.</p>
+                <!-- Image pour une sortie au musée -->
+                <img src="./public/assets/museum.png" alt="Musée" class="activity-img">
+                <!-- Image pour une activité sportive en extérieur -->
+                <img src="./public/assets/sport.png" alt="Activité sportive" class="activity-img">
+            </div>
+            
+            <!-- Activité neigeuse -->
+            <div class="activity-card" id="snowy">
+                <img src="../boisson/public/assets/snow.png" alt="Neige" class="activity-img">
+                <h3>Activités neigeuses</h3>
+                <p>Faites du ski, de la luge, ou construisez un bonhomme de neige !</p>
+                <!-- Image spécifique à l'activité neigeuse (ski) -->
+                <img src="./public/assets/ski.png" alt="Ski" class="activity-img">
+            </div>
+        </div>
+
+        <!-- Bouton pour retourner au Guide Météo -->
+        <a href="guide.html" class="back-button">Retour au Guide Météo</a>
+    </div>
+
+    <script src="activites.js"></script>
+</body>
+</html>

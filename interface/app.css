@@ -4,6 +4,8 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* Section à remplir toute la hauteur avec une belle transition */
@@ -18,12 +20,12 @@ section {
     border-radius: 15px;
 }
 
-/* Espacement et couleur du texte */
 .card-body {
     padding: 40px;
 }
 
-.card-body h1, .card-body h2 {
+.card-body h1,
+.card-body h2 {
     font-weight: bold;
 }
 
@@ -72,9 +74,9 @@ footer p {
     left: 0;
     right: 0;
     z-index: 1000;
+    background-color: #007bff; /* Bleu clair pour la navbar */
 }
 
-/* Styles pour la navbar active */
 .navbar-nav .nav-item {
     margin-left: 15px;
 }
@@ -83,6 +85,29 @@ footer p {
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 10px 15px;
+    color: white;
+    display: block;
+}
+
+.navbar-nav .nav-item a:hover {
+    background-color: #0056b3; /* Bleu plus foncé pour l'effet hover */
+}
+
+/* Dropdown menu */
+.nav-item.dropdown .dropdown-menu {
+    background-color: #007bff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item.dropdown .dropdown-item {
+    color: white;
+    padding: 10px 15px;
+}
+
+.nav-item.dropdown .dropdown-item:hover {
+    background-color: #0056b3; /* Couleur sur hover dans le menu déroulant */
 }
 
 /* Espacement global */
@@ -106,6 +131,10 @@ footer p {
     object-fit: cover;
 }
 
+.card-body .btn {
+    margin-top: 15px;
+}
+
 /* Responsivité */
 @media (max-width: 767px) {
     .input-group {
@@ -114,5 +143,18 @@ footer p {
 
     .card-img-top {
         height: 150px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item a {
+        padding: 8px 12px;
+    }
+
+    .card-body {
+        padding: 30px;
     }
 }

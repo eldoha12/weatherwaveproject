@@ -22,7 +22,16 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#weather">Weather</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="weatherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Weather
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="weatherDropdown">
+                            <li><a class="dropdown-item" href="../current/currentwheather.html">Current Weather</a></li>
+                            <li><a class="dropdown-item" href="../guide meteo/guide.html">Guide Météo</a></li>
+                            <li><a class="dropdown-item" href="../carte/carte.html">Carte</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -69,42 +78,41 @@
             </section>
 
             <!-- Section Articles -->
-<section id="articles" class="col-12 py-5">
-    <h2 class="text-center fw-bold mb-4">Nos Articles</h2>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <img src="public/assets/hiver.png" class="card-img-top" alt="Article 1">
-                <div class="card-body">
-                    <h5 class="card-title">Les prévisions météorologiques pour l'hiver</h5>
-                    <p class="card-text">Découvrez ce que l'hiver nous réserve cette année, avec des conseils pour se préparer à des conditions extrêmes.</p>
-                    <a href="./articles/article1.html" class="btn btn-primary">Lire l'article</a>
+            <section id="articles" class="col-12 py-5">
+                <h2 class="text-center fw-bold mb-4">Nos Articles</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img src="public/assets/hiver.png" class="card-img-top" alt="Article 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Les prévisions météorologiques pour l'hiver</h5>
+                                <p class="card-text">Découvrez ce que l'hiver nous réserve cette année, avec des conseils pour se préparer à des conditions extrêmes.</p>
+                                <a href="./articles/article1.html" class="btn btn-primary">Lire l'article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img src="public/assets/science.png" class="card-img-top" alt="Article 2">
+                            <div class="card-body">
+                                <h5 class="card-title">La science derrière la météo</h5>
+                                <p class="card-text">Explorez comment les météorologues utilisent des modèles complexes pour prévoir le temps avec précision.</p>
+                                <a href="./articles/article2.html" class="btn btn-primary">Lire l'article</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img src="public/assets/change.png" class="card-img-top" alt="Article 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Impact du changement climatique sur les prévisions</h5>
+                                <p class="card-text">Comprenez comment le changement climatique affecte les prévisions météorologiques à long terme.</p>
+                                <a href="./articles/article3.html" class="btn btn-primary">Lire l'article</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <img src="public/assets/science.png" class="card-img-top" alt="Article 2">
-                <div class="card-body">
-                    <h5 class="card-title">La science derrière la météo</h5>
-                    <p class="card-text">Explorez comment les météorologues utilisent des modèles complexes pour prévoir le temps avec précision.</p>
-                    <a href="./articles/article2.html" class="btn btn-primary">Lire l'article</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-                <img src="public/assets/change.png" class="card-img-top" alt="Article 3">
-                <div class="card-body">
-                    <h5 class="card-title">Impact du changement climatique sur les prévisions</h5>
-                    <p class="card-text">Comprenez comment le changement climatique affecte les prévisions météorologiques à long terme.</p>
-                    <a href="./articles/article3.html" class="btn btn-primary">Lire l'article</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+            </section>
 
             <!-- Section Contact -->
             <section id="contact" class="col-12 py-5">

@@ -28,7 +28,7 @@ WeatherWave est une application météo dynamique et réactive qui fournit aux u
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/username/weatherwaveproject.git
+   git clone https://github.com/elfadilid/weatherwaveproject.git
    ```
 
 2. Accédez au répertoire du projet :

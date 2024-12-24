@@ -26,7 +26,15 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 ### **Expérience utilisateur enrichie** 🌟
 4. **Thème jour/nuit automatique** : L'application adapte son thème à l'heure de la journée.  
 5. **Alertes météo** : Recevez des notifications pour des événements météorologiques importants.  
-6. **Recommandations** : Suggestions de boissons 🍹 et vêtements 👕 en fonction de la météo.  
+6. **Recommandations** : 
+## 🧴 Suggestions en fonction de la météo
+
+**Découvrez des recommandations personnalisées en fonction de la météo :**
+
+- **🍹 Boissons** : Des idées de boissons adaptées (thé glacé pour les journées chaudes, chocolat chaud pour les temps froids, etc.).
+- **👕 Vêtements** : Conseils vestimentaires selon la température (t-shirt léger, pull chaud, imperméable, etc.).
+- **🎯 Activités** : Propositions d'activités à faire (pique-nique ensoleillé, lecture à la maison lors de jours pluvieux, etc.).
+
 
 ### **Interfaces utilisateur intuitives** 🖥️📱
 7. **Authentification complète** : Interfaces pour connexion, inscription et réinitialisation de mot de passe.  

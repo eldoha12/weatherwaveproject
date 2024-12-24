@@ -1,0 +1,80 @@
+afficher.css
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3a8a, #0d1b2a); /* Dégradé bleu foncé */
+    color: #ffffff; /* Texte blanc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .weather-container {
+    background: #2d2d2d; /* Fond gris foncé */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre discrète */
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .weather-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #facc15; /* Jaune vif pour les titres */
+  }
+  
+  .weather-header p {
+    font-size: 16px;
+    color: #d1d5db; /* Gris clair */
+  }
+  
+  .weather-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .weather-icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .weather-info h2 {
+    margin: 0;
+    font-size: 36px;
+    color: #60a5fa; /* Bleu clair pour la température */
+  }
+  
+  .weather-info p {
+    font-size: 18px;
+    color: #e5e7eb; /* Texte blanc cassé */
+  }
+  
+  .weather-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+  .stat p {
+    margin: 0;
+    font-size: 14px;
+    color: #9ca3af; /* Gris moyen pour les légendes */
+  }
+  
+  .stat span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #facc15; /* Jaune vif pour les valeurs importantes */
+  }
+  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherWave - Vidéos Météo en Direct</title>
+  <link rel="stylesheet" href="direct.css">
+</head>
+<body>
+  <header>
+    <h1>WeatherWave</h1>
+    <p>Vidéos météo en direct</p>
+  </header>
+
+  <main>
+    <!-- Section Vidéos Météo en Direct -->
+    <section id="live-weather">
+      <h2>Vidéos météo en direct</h2>
+      <div id="video-container">
+        <!-- Exemple : Flux YouTube -->
+        <iframe 
+          id="live-video"
+          width="560" 
+          height="315" 
+          src="https://www.youtube.com/embed/live_stream?channel=ID_DEFAULT_CHANNEL" 
+          title="Live Weather Stream" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 WeatherWave - Tous droits réservés</p>
+  </footer>
+
+  <script src="direct.js"></script>
+</body>
+</html>

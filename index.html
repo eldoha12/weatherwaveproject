@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Connexion - Application Météo</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWave</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="login-container">
-    <h1 class="app-title">Application Météo "WeatherWave"</h1>
-    <form class="login-form">
-      <div class="input-group">
-        <label for="email">Adresse e-mail</label>
-        <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" required>
-      </div>
-      <div class="input-group">
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
-      </div>
-      <a href="./interface/app.html" class="login-button">Se connecter</a>
-    </form>
-    <p class="register-link">Pas encore inscrit ? <a href="./inscription/inscription.html">Créer un compte</a></p>
-    <p class="register-link">Mot de passe oublier ? <a href="./resetpassword/reset.html">Rest password</a></p>
-  </div>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="logo">WeatherWave</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="./connection/connection.html"><button class="sign-in">Sign In</button></a>
+                <a href="/signout"><button class="sign-out">Sign Out</button></a>
+            </div>            
+        </div>
+    </header>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <!-- Sources for different video formats -->
+            <source src="videos/weather1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="overlay">
+            <h1>Welcome to WeatherWave</h1>
+            <p></p> <!-- Dynamic message displayed by JS -->
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            WeatherWave is your go-to platform for accurate, real-time weather updates. 
+            From sunny skies to stormy clouds, we have all the details you need to plan your day.
+        </p>
+    </section>
+
+    <!-- Video Info Section -->
+    <section id="video">
+        <h2>Dynamic Weather Videos</h2>
+        <p>
+            Enjoy a different weather-themed background video every time you visit. 
+            Our videos capture the beauty of nature, from serene clouds to vibrant sunsets.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            Have questions or feedback? Reach out to us at 
+            <a href="mailto:contact@weatherwave.com">contact@weatherwave.com</a>.
+        </p>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
 </body>
 </html>
-  

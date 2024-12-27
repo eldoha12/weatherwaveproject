@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Météo</title>
+    <link rel="stylesheet" href="jeu.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeu Météo</h1>
+        <p>Devinez le temps dans une ville !</p>
+        <div id="weather-info">
+            <p id="weather-description"></p>
+            <img id="weather-icon" src="" alt="Weather Icon">
+        </div>
+        <div>
+            <label for="guess">Votre réponse (soleil, pluie, nuage, neige) :</label>
+            <input type="text" id="guess" placeholder="Entrez votre réponse">
+        </div>
+        <button onclick="checkGuess()">Vérifier</button>
+        <p id="result"></p>
+    </div>
+    <script src="jeu.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Météo pour Enfants</title>
+    <link rel="stylesheet" href="enfant.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeu Météo pour Enfants</h1>
+        <p>Devine le temps en écoutant ou en regardant !</p>
+
+        <div id="weather-question">
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <p id="question-text">Quel est ce temps ?</p>
+        </div>
+
+        <div class="buttons-container">
+            <button class="weather-option" onclick="checkAnswer('sunny')">Soleil</button>
+            <button class="weather-option" onclick="checkAnswer('rainy')">Pluie</button>
+            <button class="weather-option" onclick="checkAnswer('cloudy')">Nuage</button>
+            <button class="weather-option" onclick="checkAnswer('snowy')">Neige</button>
+        </div>
+
+        <p id="result"></p>
+        <button onclick="nextQuestion()">Suivant</button>
+    </div>
+
+    <script src="enfant.js"></script>
+</body>
+</html>

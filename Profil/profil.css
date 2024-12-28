@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Ajusté depuis height: 100vh */
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -78,8 +78,10 @@ button:hover {
 .profile-picture img {
     width: 120px;
     height: 120px;
+    max-width: 100%; /* Ajouté */
+    max-height: 120px; /* Ajouté */
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain; /* Changé de "cover" */
     margin-bottom: 10px;
 }
 

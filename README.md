@@ -12,7 +12,7 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 ## **Équipe de développement** 👩‍💻👨‍💻
 
 - **Scrum Master** : Mr. OTHMAN MEKOUAR, DOHA EL FADILI  
-- **Développeurs** : ACHRAF ZEROUALI, HAYAT OUTALEB, HAMZA IDRISSI  
+- **Développeurs** : DOHA EL FADILI, ACHRAF ZEROUALI, HAYAT OUTALEB, HAMZA IDRISSI  
 
 ---
 

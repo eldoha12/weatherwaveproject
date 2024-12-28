@@ -29,9 +29,12 @@
                         <ul class="dropdown-menu" aria-labelledby="weatherDropdown">
                             <li><a class="dropdown-item" href="../profil/profil.html">Mon Profil</a></li>
                             <li><a class="dropdown-item" href="../current/currentwheather.html">Current Weather</a></li>
+                            <li><a class="dropdown-item" href="../prevission/prevission.html">Prevission 7 jours</a></li>
                             <li><a class="dropdown-item" href="../guide meteo/guide.html">Guide Météo</a></li>
                             <li><a class="dropdown-item" href="../carte/carte.html">Carte</a></li>
-                            <li><a class="dropdown-item" href="../quiz/quiz.html">Quiz & informations</a></li>
+                            <li><a class="dropdown-item" href="../quiz_info/quiz_info.html">Quiz & informations</a></li>
+                            <li><a class="dropdown-item" href="../sport/sport.html">Evenement sportif</a></li>
+                            <li><a class="dropdown-item" href="../F&Q/F&Q.html">F&Q</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#articles">Articles</a></li>
@@ -59,22 +62,6 @@
                     <div class="card-body">
                         <h2 class="text-center fw-bold mb-4">À propos de nous</h2>
                         <p class="fs-5">WeatherWave est une plateforme dédiée à fournir des données météorologiques fiables et actualisées grâce à des technologies avancées et des partenariats avec les meilleures sources de données.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section Weather -->
-            <section id="weather" class="col-12 py-5">
-                <h2 class="text-center fw-bold mb-4">Consultez la météo</h2>
-                <div class="text-center">
-                    <div class="input-group mb-4 w-50 mx-auto">
-                        <input type="text" id="city" class="form-control" placeholder="Entrez une ville" />
-                        <button class="btn btn-primary" onclick="getWeather()">Rechercher</button>
-                    </div>
-                    <div id="weather-info" class="mt-4">
-                        <p id="temperature" class="fs-4">Température: -- °C</p>
-                        <p id="condition" class="fs-4">Condition: --</p>
-                        <img id="weather-icon" src="" alt="Météo actuelle" class="img-fluid" style="max-width: 100px;" />
                     </div>
                 </div>
             </section>

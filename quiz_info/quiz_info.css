@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #f7f7f7);
+    color: #333;
+}
+
+/* Container Styles */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* Link Container */
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 7px;
+}
+
+/* Links Styled as Buttons */
+.link-button {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #52b6dd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 30%;
+    text-align: center;
+    gap: 7px;
+}
+
+.link-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.link-button:active {
+    background-color: #3e8e41;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .link-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

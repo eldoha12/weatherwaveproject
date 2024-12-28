@@ -1,15 +1,16 @@
-// Exemple d'utilisation basique
 const videoContainer = document.getElementById("live-video");
 
-// Fonction pour charger un flux vidéo basé sur une région
-function loadVideo(region) {
-  const videos = {
-    france: "https://www.youtube.com/embed/live_stream?channel=ID_CHANNEL_FR",
-    usa: "https://www.youtube.com/embed/live_stream?channel=ID_CHANNEL_USA",
-    default: "https://www.youtube.com/embed/live_stream?channel=ID_DEFAULT_CHANNEL"
-  };
+// Liste des vidéos locales
+const videos = [
+  "./videos/video1.mp4",
+  "./videos/video2.mp4",
+  "./videos/video3.mp4"
+];
 
-  videoContainer.src = videos[region] || videos.default;
+// Fonction pour charger une vidéo aléatoire à chaque actualisation
+function loadRandomVideo() {
+  const randomIndex = Math.floor(Math.random() * videos.length);
+  videoContainer.src = videos[randomIndex];
 }
 
 // Détecter la localisation de l'utilisateur (optionnel)
@@ -21,13 +22,13 @@ if (navigator.geolocation) {
 
       // Déduire une région (simplifié ici)
       const region = latitude > 45 ? "france" : "usa";
-      loadVideo(region);
+      loadRandomVideo(); // Charge une vidéo aléatoire
     },
     (error) => {
       console.error("Impossible de récupérer la localisation", error);
-      loadVideo("default");
+      loadRandomVideo(); // Charge une vidéo aléatoire en cas d'erreur
     }
   );
 } else {
-  loadVideo("default");
+  loadRandomVideo(); // Charge une vidéo aléatoire si la géolocalisation est désactivée
 }

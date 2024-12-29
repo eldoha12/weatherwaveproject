@@ -16,18 +16,24 @@
     <!-- Section Vidéos Météo en Direct -->
     <section id="live-weather">
       <h2>Vidéos météo en direct</h2>
+
+      <!-- Boutons pour choisir la région -->
+      <div id="region-buttons" style="margin-bottom: 20px;">
+        <button onclick="loadVideo('usa')">USA</button>
+        <button onclick="loadVideo('france')">France</button>
+        <button onclick="loadVideo('maroc')">Maroc</button>
+      </div>
+
       <div id="video-container">
-        <!-- Exemple : Flux YouTube -->
-        <iframe 
+        <!-- Exemple : Flux vidéo dynamique -->
+        <video 
           id="live-video"
           width="560" 
           height="315" 
-          src="https://www.youtube.com/embed/live_stream?channel=ID_DEFAULT_CHANNEL" 
-          title="Live Weather Stream" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
+          controls 
+          src="./videos/video1.mp4">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
       </div>
     </section>
   </main>

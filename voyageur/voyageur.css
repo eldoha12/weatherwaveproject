@@ -1,0 +1,50 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    color: #333;
+  }
+  
+  #weather-info {
+    margin-top: 20px;
+  }
+  
+  #car-animation {
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  #car {
+    width: 100px;
+    position: absolute;
+    left: -150px;
+    bottom: 0;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  footer {
+    margin-top: 50px;
+  }
+  

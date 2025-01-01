@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo Voyageur</title>
+  <link rel="stylesheet" href="voyageur.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Météo Voyageur</h1>
+    </header>
+
+    <!-- Input pour entrer une ville -->
+    <div id="city-input">
+      <label for="city-name">Entrez une ville:</label>
+      <input type="text" id="city-name" placeholder="Ex: Paris">
+      <button id="search-city-btn">Rechercher</button>
+    </div>
+
+    <!-- Affichage des informations météo -->
+    <div id="weather-info">
+      <p id="city">Ville: </p>
+      <p id="temp">Température: </p>
+      <p id="description">Description: </p>
+    </div>
+
+    <!-- Animation de la voiture -->
+    <div id="car-animation">
+      <img src="car.jpg" id="car" alt="Car">
+    </div>
+
+    <!-- Bouton pour activer le mode Voyageur -->
+    <button id="travel-mode-btn">Mode Voyageur</button>
+
+    <footer>
+      <p>© 2025 Météo Voyageur</p>
+    </footer>
+  </div>
+
+  <script src="voyageur.js"></script>
+</body>
+</html>

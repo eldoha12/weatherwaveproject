@@ -1,51 +1,77 @@
-const videos = [
-    'videos/weather1.mp4', // Vidéo de nuages
-    'videos/weather2.mp4', // Vidéo de pluie
-    'videos/weather3.mp4', // Vidéo ensoleillée
-    'videos/weather4.mp4',
-    'videos/weather5.mp4',
-];
+const express = require('express');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
+const fs = require('fs');
+const path = require('path');
 
-function setRandomVideo() {
-    const videoElement = document.getElementById('background-video');
-    const randomIndex = Math.floor(Math.random() * videos.length);
-    const videoSource = videoElement.querySelector('source');
-    
-    // Vérifie si le fichier vidéo existe
-    const videoUrl = videos[randomIndex];
-    fetch(videoUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Video file not found');
-            }
-            // Si la vidéo est trouvée, l'assigner
-            videoSource.src = videoUrl;
-            videoElement.load(); // Recharge la vidéo avec la nouvelle source
-        })
-        .catch(error => {
-            console.error("Error loading video:", error);
-            // Charger une vidéo par défaut si la vidéo ne peut pas être trouvée
-            videoSource.src = 'videos/weather1.mp4'; // Par exemple, vidéo par défaut
-            videoElement.load();
-        });
-}
+const app = express();
+const PORT = 4000; // Changer le port à 4000 si c'est celui que tu veux utiliser
 
-// Fonction pour afficher un message dynamique selon l'heure
-function displayGreeting() {
-    const currentHour = new Date().getHours();
-    const greetingMessage = document.querySelector('.overlay p');
+// Middleware pour lire les JSON dans les requêtes
+app.use(bodyParser.json());
 
-    if (currentHour < 12) {
-        greetingMessage.textContent = "Good Morning! Start your day with accurate weather updates.";
-    } else if (currentHour < 18) {
-        greetingMessage.textContent = "Good Afternoon! Stay updated with the latest weather.";
-    } else {
-        greetingMessage.textContent = "Good Evening! Check the weather before your plans.";
-    }
-}
+// Middleware pour servir les fichiers statiques (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Initialisation lors du chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-    setRandomVideo(); // Charge une vidéo aléatoire
-    displayGreeting(); // Affiche un message de bienvenue
+// Fichier JSON pour stocker les comptes utilisateurs
+const USERS_FILE = 'users.json';
+
+// Fonction utilitaire pour lire et écrire dans le fichier JSON
+const getUsers = () => {
+  if (!fs.existsSync(USERS_FILE)) return [];
+  return JSON.parse(fs.readFileSync(USERS_FILE, 'utf8'));
+};
+
+const saveUsers = (users) => {
+  fs.writeFileSync(USERS_FILE, JSON.stringify(users, null, 2));
+};
+
+// Route pour enregistrer un utilisateur
+app.post('/register', async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email et mot de passe sont obligatoires.' });
+  }
+
+  const users = getUsers();
+
+  if (users.find((user) => user.email === email)) {
+    return res.status(400).json({ message: 'Cet email est déjà utilisé.' });
+  }
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  users.push({ email, password: hashedPassword });
+  saveUsers(users);
+
+  res.status(201).json({ message: 'Utilisateur enregistré avec succès.' });
+});
+
+// Route pour connecter un utilisateur
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email et mot de passe sont obligatoires.' });
+  }
+
+  const users = getUsers();
+
+  const user = users.find((user) => user.email === email);
+  if (!user) {
+    return res.status(404).json({ message: 'Utilisateur non trouvé.' });
+  }
+
+  const isPasswordValid = await bcrypt.compare(password, user.password);
+  if (!isPasswordValid) {
+    return res.status(401).json({ message: 'Mot de passe incorrect.' });
+  }
+
+  res.status(200).json({ message: 'Connexion réussie.' });
+});
+
+// Démarrage du serveur
+app.listen(PORT, () => {
+  console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });

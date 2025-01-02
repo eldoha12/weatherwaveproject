@@ -8,6 +8,7 @@ body {
     padding: 0;
 }
 
+
 /* Section à remplir toute la hauteur avec une belle transition */
 section {
     padding: 80px 0;
@@ -79,6 +80,7 @@ footer p {
 
 .navbar-nav .nav-item {
     margin-left: 15px;
+
 }
 
 .navbar-nav .nav-item a {

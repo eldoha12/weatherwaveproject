@@ -10,20 +10,33 @@
   <div class="container">
     <header>
       <h1>WeatherWave</h1>
-      <p>Rejoignez-nous pour voir des Prévisions Météo Personnalisées !! </p>
+      <p>Rejoignez-nous pour voir des Prévisions Météo Personnalisées !!</p>
     </header>
     <form class="signup-form">
-      <input type="Text" placeholder="Nom complet" required>
-      <input type="Email" placeholder="Adresse email" required>
-      <input type="Password" placeholder="Mot de passe" required>
-      <input type="Password" placeholder="Confirmer le mot de passe" required>
-      <button type="Submit">S'inscrire</button>
-      <p>Vous Avez Déjà un Compte ? <a href="connexion.html">Se connecter</a></p>
+      <div class="input-group">
+        <input type="text" placeholder="Nom complet" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="input-group">
+        <input type="email" placeholder="Adresse email" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Mot de passe" required>
+        <span class="error-message"></span>
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Confirmer le mot de passe" required>
+        <span class="error-message"></span>
+      </div>
+      <button type="submit">S'inscrire</button>
+      <p>Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
     </form>
     <footer>
       <a href="./polit.html">Politique de confidentialité</a>
       <a href="./condition.html">Conditions générales</a>
     </footer>
+    <script src="inscription.js"></script>
   </div>
 </body>
 </html>

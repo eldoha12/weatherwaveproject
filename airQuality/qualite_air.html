@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prédictions - Qualité de l'air</title>
+  <link rel="stylesheet" href="qualite_air.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Prédictions sur la Qualité de l'Air</h1>
+      <p>Restez informé sur la qualité de l'air et protégez votre santé !</p>
+    </header>
+    <main>
+      <section class="filter-section">
+        <label for="city-select">Choisissez votre ville :</label>
+        <select id="city-select">
+          <option value="paris">Paris</option>
+          <option value="lyon">Lyon</option>
+          <option value="marseille">Marseille</option>
+          <option value="bordeaux">Bordeaux</option>
+          <option value="lille">Lille</option>
+        </select>
+        <button id="get-predictions">Obtenir les Prédictions</button>
+      </section>
+      <section class="predictions-section">
+        <div class="prediction-card">
+          <h2>Indice de qualité de l'air : <span id="aqi">-</span></h2>
+          <p id="health-advice">Veuillez sélectionner une ville pour obtenir des informations.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 WeatherWave - Tous droits réservés</p>
+    </footer>
+  </div>
+  <script src="qualite_air.js"></script>
+</body>
+</html>

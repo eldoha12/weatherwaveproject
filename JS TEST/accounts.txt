@@ -10,6 +10,11 @@
     {
       "email": "youssef1@weather.com",
       "password": "Youssef1234"
+    },
+    {
+    "email": "othman@weather.com",
+    "password": "1234"
     }
+
   ]
   

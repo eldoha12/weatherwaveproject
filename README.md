@@ -27,14 +27,13 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 4. **Thème jour/nuit automatique** : L'application adapte son thème à l'heure de la journée.  
 5. **Alertes météo** : Recevez des notifications pour des événements météorologiques importants.  
 6. **Recommandations** : 
-## 🧴 Suggestions en fonction de la météo
+   ## 🧴 Suggestions en fonction de la météo
 
 **Découvrez des recommandations personnalisées en fonction de la météo :**
 
 - **🍹 Boissons** : Des idées de boissons adaptées (thé glacé pour les journées chaudes, chocolat chaud pour les temps froids, etc.).
 - **👕 Vêtements** : Conseils vestimentaires selon la température (t-shirt léger, pull chaud, imperméable, etc.).
 - **🎯 Activités** : Propositions d'activités à faire (pique-nique ensoleillé, lecture à la maison lors de jours pluvieux, etc.).
-
 
 ### **Interfaces utilisateur intuitives** 🖥️📱
 7. **Authentification complète** : Interfaces pour connexion, inscription et réinitialisation de mot de passe.  
@@ -46,8 +45,11 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 ## **Technologies utilisées** 💻
 
 - **Frontend** : HTML, CSS, JavaScript  
+- **Backend** : Node.js, Express, bcrypt, sessions  
 - **API Météo** : Intégration d'une API météo fiable pour des données en temps réel.  
 - **Responsive Design** : Adapté pour des résolutions d'écran variées via `@media queries`.  
+- **Base de données (Backend)** : Utilisation de fichiers JSON pour stocker les utilisateurs et gérer les sessions.  
+- **Sécurité** : Utilisation de bcrypt pour le cryptage des mots de passe des utilisateurs et gestion des sessions avec express-session.
 
 ---
 
@@ -56,6 +58,7 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 1. Clonez le dépôt :  
    ```bash
    git clone https://github.com/elfadilid/weatherwaveproject.git
+
    ```
 
 2. Accédez au répertoire du projet :
@@ -64,6 +67,16 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
    ```
 
 3. Ouvrez le fichier `index.html` dans votre navigateur pour visualiser l'application.
+
+## **Backend** 🖥️  
+Le backend de WeatherWave utilise **Node.js** avec le framework **Express** pour gérer l'authentification des utilisateurs, la gestion des sessions et la mise à jour des profils utilisateurs.  
+
+### **Fonctionnalités Backend** :  
+- **Inscription d'un utilisateur** : Permet aux utilisateurs de créer un compte sécurisé avec un mot de passe crypté.  
+- **Connexion des utilisateurs** : Authentifie les utilisateurs via leurs emails et mots de passe.  
+- **Gestion du profil utilisateur** : Permet aux utilisateurs de consulter et mettre à jour leurs informations personnelles.  
+- **Gestion des sessions** : Maintient les utilisateurs connectés via des sessions.  
+
 ## **Améliorations futures** 🔮
 ----------------------------
 

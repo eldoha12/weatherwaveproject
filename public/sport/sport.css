@@ -1,20 +1,24 @@
+body{
+    background: linear-gradient(to bottom, #87ceeb, #1e90ff);
+}
+
 #sports-events {
     margin-top: 30px;
     padding: 30px;
-    background-color: #e7f4f9; /* Lighter blue background */
+    background-color:  linear-gradient(to bottom, #87ceeb, #1e90ff); /* Lighter blue background */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 #sports-events h2 {
-    color: #2c3e50; /* Darker text color */
+    color: black; /* Darker text color */
     font-size: 28px; /* Larger font size */
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 #sports-events div {
-    background-color: #fff;
+    background-color:linear-gradient(to bottom, #87ceeb, #1e90ff);
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -29,13 +33,13 @@
 
 #sports-events h3 {
     font-size: 22px; /* Slightly larger subheading */
-    color: #34495e; /* Dark grayish-blue color */
+    color: black; /* Dark grayish-blue color */
     margin-bottom: 10px;
 }
 
 #sports-events p {
     font-size: 16px;
-    color: #7f8c8d; /* Softer gray for paragraph text */
+    color: black; /* Softer gray for paragraph text */
     line-height: 1.6;
     margin: 5px 0;
 }

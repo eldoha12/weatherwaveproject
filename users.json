@@ -1,14 +1,77 @@
 [
   {
     "email": "o.mekouar@weather.com",
-    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG"
+    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG",
+    "phone": "1234567890"
   },
   {
     "email": "d.elfadili@weather.com",
-    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG"
+    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG",
+    "phone": "0987654321"
   },
   {
     "email": "youssef1@weather.com",
-    "password": "$2b$10$sYHM6EB2XeXkjhH56l1h8eZ6B8g7K3TDZPUGCxy5.DMdzh4afgxfy"
+    "password": "$2b$10$sYHM6EB2XeXkjhH56l1h8eZ6B8g7K3TDZPUGCxy5.DMdzh4afgxfy",
+    "phone": "1122334455"
+  },
+  {
+    "email": "othman@weather.com",
+    "password": "$2b$10$3DMeyYryNGxpXCHgUTWI7etwhAzXip64Sw0VEzXq5XMZldqi0.zS2"
+  },
+  {
+    "email": "leylaa.leylaa@weather.com",
+    "password": "$2b$10$F5NSt2lYDlQ3EGuYMdjYH.J47uPaQgf84OEfUIwW9MM2w4Tc96SV2",
+    "phone": "+212667676767",
+    "name": "leylaa",
+    "dateOfBirth": "2001-03-03"
+  },
+  {
+    "email": "karym.karym@weather.com",
+    "password": "$2b$10$w2y/Is8xUXn139vRLYWpOOZ5lWQxxVJ42M0v4VKJwIWOjq1xd.DSS",
+    "phone": "+212667676767",
+    "name": "karym",
+    "dateOfBirth": "2004-04-04"
+  },
+  {
+    "email": "kamal.kamal@weather.com",
+    "password": "$2b$10$04aPQOrKVTf40kUKkJ9JiuZx33v9ZOKxypq8elbphOwYBZTGxamXW",
+    "phone": "+212667676799",
+    "name": "kamal",
+    "dateOfBirth": "2009-09-09"
+  },
+  {
+    "email": "ikram.ikram@weather.com",
+    "password": "$2b$10$kJIg3s2pEF75yTntyzBxFulQe2LXzCNH.NLUoYrcO/v7SPrrql6E6",
+    "phone": "+212667676767",
+    "name": "ikram",
+    "dateOfBirth": "2008-08-08"
+  },
+  {
+    "email": "karam.karam@weather.com",
+    "password": "$2b$10$eub.kJ8opLQwOGjTMJWDseuSQ0xj1ms9We413ifjSDkQnwxHZqFX.",
+    "phone": "+212688888888",
+    "name": "karam",
+    "dateOfBirth": "2008-08-08"
+  },
+  {
+    "email": "kiwi.kiwi@weather.com",
+    "password": "$2b$10$WKnwIqR.7WNlD/n7Ha9g3epql6olJLwrKu2LnHDSDMr9RwDoMyndu",
+    "phone": "+212667676767",
+    "name": "kiwi",
+    "dateOfBirth": "2001-01-01"
+  },
+  {
+    "email": "kiwii.kiwii@weather.com",
+    "password": "$2b$10$Nmba.3568/ctk7wd9v35euRgDY7UszRy1R6yixAjGgQGnejyue7au",
+    "phone": "+212667676767",
+    "name": "kiwii",
+    "dateOfBirth": "1001-01-01"
+  },
+  {
+    "email": "lk.lk@weather.com",
+    "password": "$2b$10$G4A.11GXhf.OBoBEHz64ROfZhAqzRbaAwMnkhJYol6wbyz6l6IPby",
+    "phone": "+212688888888",
+    "name": "lk",
+    "dateOfBirth": "8800-08-08"
   }
 ]

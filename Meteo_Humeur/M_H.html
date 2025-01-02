@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo de l'Humeur</title>
+    <link rel="stylesheet" href="M_H.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌤️ Météo de l'Humeur </h1>
+        <p>Choisissez votre humeur actuelle pour découvrir des suggestions adaptées :</p>
+
+        <div class="mood-buttons">
+            <button class="mood-button" data-mood="heureux">😄 Heureux</button>
+            <button class="mood-button" data-mood="triste">😢 Triste</button>
+            <button class="mood-button" data-mood="stressé">😟 Stressé</button>
+            <button class="mood-button" data-mood="calme">😌 Calme</button>
+            <button class="mood-button" data-mood="énergique">⚡ Énergique</button>
+        </div>
+
+        <div id="suggestion" class="suggestion">
+            <h2 id="mood-title">Votre humeur : <span id="selected-mood"></span></h2>
+            <p id="mood-message"></p>
+        </div>
+    </div>
+
+    <script src="M_H.js"></script>
+</body>
+</html>

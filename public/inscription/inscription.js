@@ -1,35 +1,47 @@
-document.querySelector('.signup-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+document.querySelector('.signup-form').addEventListener('submit', function (event) {
+  event.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const confirmPassword = document.getElementById('confirm-password').value;
+  const inputs = document.querySelectorAll('.signup-form input');
+  let valid = true;
 
-  if (password !== confirmPassword) {
-      alert("Les mots de passe ne correspondent pas.");
-      return;
+  // Réinitialiser les erreurs
+  inputs.forEach(input => {
+    const error = input.nextElementSibling;
+    if (error) error.style.display = 'none';
+    input.classList.remove('error');
+  });
+
+  // Vérifications
+  inputs.forEach(input => {
+    if (input.value.trim() === '') {
+      showError(input, 'Ce champ est requis.');
+      valid = false;
+    }
+  });
+
+  const email = document.querySelector('input[placeholder="Adresse email"]');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    showError(email, "L'adresse email n'est pas valide.");
+    valid = false;
   }
 
-  try {
-      const response = await fetch('http://localhost:4000/register', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, password })
-      });
+  const password = document.querySelector('input[placeholder="Mot de passe"]');
+  const confirmPassword = document.querySelector('input[placeholder="Confirmer le mot de passe"]');
+  if (password.value.trim() !== confirmPassword.value.trim()) {
+    showError(confirmPassword, 'Les mots de passe ne correspondent pas.');
+    valid = false;
+  }
 
-      const data = await response.json();
-
-      if (response.ok) {
-          alert('Inscription réussie');
-          window.location.href = "../index.html";  // Rediriger vers la page de connexion
-      } else {
-          alert(data.message);  // Afficher l'erreur
-      }
-  } catch (error) {
-      console.error('Erreur:', error);
-      alert("Une erreur est survenue lors de l'inscription.");
+  if (valid) {
+    alert('Inscription réussie !');
+    window.location.href = "connexion.html";
   }
 });
+
+function showError(input, message) {
+  const error = input.nextElementSibling;
+  error.textContent = message;
+  error.style.display = 'block';
+  input.classList.add('error');
+}

@@ -11,7 +11,7 @@
         <h2>Mon Profil</h2>
 
         <!-- Formulaire pour la gestion du profil -->
-        <form id="profileForm" action="/update-profile" method="POST" enctype="multipart/form-data">
+        <form action="#" method="POST" enctype="multipart/form-data">
             <!-- Photo de profil -->
             <div class="profile-picture">
                 <img src="default-avatar.png" alt="Photo de Profil" id="profile-img">
@@ -62,7 +62,7 @@
         // Fonction pour afficher la photo sélectionnée
         function previewImage(event) {
             const reader = new FileReader();
-            reader.onload = function () {
+            reader.onload = function() {
                 const output = document.getElementById('profile-img');
                 output.src = reader.result;
             };
@@ -82,10 +82,6 @@
         function toggleTheme() {
             const theme = document.getElementById("theme").value;
             const body = document.getElementById("body");
-
-            // Sauvegarder le thème choisi dans le localStorage
-            localStorage.setItem('theme', theme);
-
             if (theme === "dark") {
                 body.classList.add("dark-theme");
                 body.classList.remove("light-theme");
@@ -94,19 +90,6 @@
                 body.classList.remove("dark-theme");
             }
         }
-
-        // Initialiser le thème basé sur la préférence stockée
-        window.onload = function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.getElementById('theme').value = savedTheme;
-                toggleTheme();
-            } else {
-                // Si aucun thème n'est stocké, on applique le mode clair par défaut
-                document.getElementById('theme').value = 'light';
-                toggleTheme();
-            }
-        };
     </script>
 </body>
 </html>

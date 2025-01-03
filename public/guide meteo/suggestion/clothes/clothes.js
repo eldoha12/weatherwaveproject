@@ -79,9 +79,6 @@ function displayClothingForSelectedGender(gender) {
 
         weatherBlock.innerHTML = `
             <h2>${description} à ${temperature}°C</h2>
-            <div class="weather-image">
-                <img src="public/assets/${description === 'ensoleillé' ? 'sunny' : description === 'pluie' ? 'rainy' : description === 'neige' ? 'snow' : 'cloudy'}.png" alt="${description}">
-            </div>
         `;
 
         // Add clothing items

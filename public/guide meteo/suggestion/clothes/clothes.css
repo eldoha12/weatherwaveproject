@@ -42,11 +42,6 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-#weather-image {
-    width: 100px;
-    height: 100px;
-}
-
 #clothing-items {
     display: flex;
     flex-wrap: wrap;

@@ -11,7 +11,8 @@
         <h2>Mon Profil</h2>
 
         <!-- Formulaire pour la gestion du profil -->
-        <form id="profileForm" action="/update-profile" method="POST" enctype="multipart/form-data">
+        <form id="profileForm" method="POST" enctype="multipart/form-data" onsubmit="confirmModify(event)">
+
             <!-- Photo de profil -->
             <div class="profile-picture">
                 <img src="default-avatar.png" alt="Photo de Profil" id="profile-img">
@@ -51,9 +52,11 @@
             </select>
 
             <!-- Enregistrer les modifications -->
-            <button type="submit">Enregistrer les modifications</button>
-        </form>
+            <button class="modify-account" onclick="confirmModify(event)">Enregistrer les modifications</button>
 
+
+        </form>
+        
         <!-- Lien vers la suppression du compte -->
         <button class="delete-account" onclick="confirmDelete()">Supprimer mon compte</button>
     </div>
@@ -77,6 +80,18 @@
                 alert("Votre compte a été supprimé.");
             }
         }
+
+        function confirmModify(event) {
+            event.preventDefault();  // Empêcher l'envoi du formulaire
+            const confirmModify = confirm("Êtes-vous sûr de vouloir enregistrer les modifications?");
+            if (confirmModify) {
+                // Logique pour enregistrer les modifications localement
+                alert("Modifications enregistrées avec succès.");
+            }
+        }
+        
+        
+        
 
         // Fonction pour basculer entre le mode clair et sombre
         function toggleTheme() {

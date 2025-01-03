@@ -45,7 +45,7 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
 ## **Technologies utilisées** 💻
 
 - **Frontend** : HTML, CSS, JavaScript  
-- **Backend** : Node.js, Express, bcrypt, sessions  
+- **Backend** : Node.js, Express, bcrypt  
 - **API Météo** : Intégration d'une API météo fiable pour des données en temps réel.  
 - **Responsive Design** : Adapté pour des résolutions d'écran variées via `@media queries`.  
 - **Base de données (Backend)** : Utilisation de fichiers JSON pour stocker les utilisateurs et gérer les sessions.  

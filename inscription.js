@@ -22,7 +22,7 @@ document.querySelector('.signup-form').addEventListener('submit', function (even
   const email = document.querySelector('input[placeholder="Adresse email"]');
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email.value.trim())) {
-    showError(email, "L'adresse email n'est pas valide.");
+    showError(email, "L'adresse email Invalide. ");
     valid = false;
   }
 

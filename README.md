@@ -66,7 +66,21 @@ WeatherWave est une application météo réactive et esthétique, conçue pour o
    cd weatherwaveproject
    ```
 
-3. Ouvrez le fichier `index.html` dans votre navigateur pour visualiser l'application.
+3. Pour l'interface frontend (HTML + JavaScript)
+Ouvrez le fichier `public/index.html` dans votre navigateur pour visualiser l'application.
+
+4. Pour le frontend et backend
+Assurez-vous d'avoir installé **Node.js** et **npm**.
+
+Installez les dépendances du backend :
+   ```bash
+   npm install express express-session body-parser bcrypt nodemon
+   ```
+Lancer le backend :
+   ```bash
+   node index.js
+   ```
+Le serveur sera accessible à http://localhost:4000.
 
 ## **Backend** 🖥️  
 Le backend de WeatherWave utilise **Node.js** avec le framework **Express** pour gérer l'authentification des utilisateurs, la gestion des sessions et la mise à jour des profils utilisateurs.  

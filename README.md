@@ -71,7 +71,11 @@ Ouvrez le fichier `public/index.html` dans votre navigateur pour visualiser l'ap
 
 4. Pour le frontend et backend
 Assurez-vous d'avoir installé **Node.js** et **npm**.
-
+Vous pouvez vérifier leur installation avec les commandes suivantes :
+   ```bash
+   node -v
+   npm -v
+   ```
 Installez les dépendances du backend :
    ```bash
    npm install express express-session body-parser bcrypt nodemon
@@ -82,14 +86,24 @@ Lancer le backend :
    ```
 Le serveur sera accessible à http://localhost:4000.
 
+Si vous utilisez PowerShell sur Windows, vous devrez ajuster la politique d'exécution pour permettre l'exécution de scripts locaux et téléchargés :
+
+   ```bash
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   ```
+Pour la Sécurisation des scripts sur macOS, Exécute ton fichier avec :
+
+   ```bash
+   node index.js
+   ```
+Cela fonctionnera sans avoir à changer les permissions sur macOS.
+
 ## **Backend** 🖥️  
 Le backend de WeatherWave utilise **Node.js** avec le framework **Express** pour gérer l'authentification des utilisateurs, la gestion des sessions et la mise à jour des profils utilisateurs.  
 
 ### **Fonctionnalités Backend** :  
 - **Inscription d'un utilisateur** : Permet aux utilisateurs de créer un compte sécurisé avec un mot de passe crypté.  
-- **Connexion des utilisateurs** : Authentifie les utilisateurs via leurs emails et mots de passe.  
-- **Gestion du profil utilisateur** : Permet aux utilisateurs de consulter et mettre à jour leurs informations personnelles.  
-- **Gestion des sessions** : Maintient les utilisateurs connectés via des sessions.  
+- **Connexion des utilisateurs** : Authentifie les utilisateurs via leurs emails et mots de passe.
 
 ## **Améliorations futures** 🔮
 ----------------------------
@@ -98,7 +112,7 @@ Le backend de WeatherWave utilise **Node.js** avec le framework **Express** pour
 * Améliorer les animations pour une expérience plus immersive.
 * Support multilingue pour une utilisation internationale.
 * Analyser et visualiser les tendances météorologiques à long terme.
-
+* Gestion des sessions : Maintient les utilisateurs connectés via des sessions, et mettre à jour leurs informations personnelles.  
 ---
 
 ## **Contribution** 🤝

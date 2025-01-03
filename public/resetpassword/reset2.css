@@ -1,6 +1,7 @@
+/* Corps général */
 body {
     font-family: Arial, sans-serif;
-    background-color: #D4EDDA; /* Couleur de fond vert pâle */
+    background-color: #888366;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,8 +10,8 @@ body {
     height: 100vh;
 }
 
-.success-container {
-    background-color: #FFFFFF; /* Fond blanc */
+.login-container {
+    background-color: #8e8686;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -18,29 +19,113 @@ body {
     width: 300px;
 }
 
-.success-title {
-    font-size: 20px;
-    color: #155724; /* Vert foncé */
-    margin-bottom: 10px;
+.login-container:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
 }
 
-.success-message {
+/* En-tête */
+.header .app-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FF1493; /* Rose vif pour le titre */
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre douce pour le titre */
+}
+
+.header .app-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6C757D; /* Gris doux */
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Instructions */
+.instructions {
     font-size: 14px;
-    color: #155724;
-    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #37474F;
+    margin-bottom: 25px;
+    font-weight: 400;
 }
 
-.back-button {
-    background-color: #28A745; /* Vert pour le bouton */
-    color: white;
-    padding: 10px 15px;
+/* Groupe d'entrée */
+.input-group {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #37474F;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #E91E63; /* Rose vif pour la bordure */
+    border-radius: 12px; /* Coins arrondis */
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #FF1493; /* Bordure rose au focus */
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.5); /* Lumière douce au focus */
+    outline: none;
+}
+
+/* Bouton d'envoi */
+.submit-button {
+    background: linear-gradient(135deg, #FF1493, #FF6EC7); /* Dégradé rose profond */
+    color: #FFFFFF;
+    padding: 16px;
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
+    border-radius: 12px; /* Coins arrondis */
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.back-button:hover {
-    background-color: #218838; /* Teinte plus foncée au survol */
+.submit-button:hover {
+    background: linear-gradient(135deg, #FF6EC7, #FF1493); /* Dégradé inversé au survol */
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.4); /* Effet de lumière */
+    transform: translateY(-2px); /* Effet d'élévation */
+}
+
+/* Lien retour à la connexion */
+.back-to-login {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6C757D;
+}
+
+.back-to-login a {
+    color: #FF1493; /* Rose vif pour le lien */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-to-login a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustement pour les appareils mobiles */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    .header .app-title {
+        font-size: 28px;
+    }
+
+    .instructions {
+        font-size: 13px;
+    }
 }

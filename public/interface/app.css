@@ -141,6 +141,23 @@ footer p {
 .card-body .btn {
     margin-top: 15px;
 }
+/* Style pour la section About Us */
+#about-us .d-flex {
+    display: flex;
+    align-items: center; /* Aligne verticalement l'image et le texte */
+    justify-content: center; /* Centre horizontalement les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser si nécessaire */
+}
+
+#about-us .esisa-logo img {
+    max-width: 170px; /* Taille maximale du logo */
+    height: auto; /* Maintient les proportions du logo */
+    margin-right: 20px; /* Espace entre l'image et la description */
+}
+
+#about-us .description {
+    flex: 1; /* Permet à la description de prendre tout l'espace restant */
+}
 
 /* Responsivité */
 @media (max-width: 767px) {

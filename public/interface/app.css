@@ -97,20 +97,25 @@ footer p {
 }
 
 /* Dropdown menu */
+/* Réduire la taille de la liste dans le menu déroulant */
 .nav-item.dropdown .dropdown-menu {
     background-color: #007bff;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 5px 0; /* Réduit l'espace intérieur du menu */
+    font-size: 0.9rem; /* Réduit la taille de la police */
 }
 
+/* Réduire l'espacement entre les éléments de la liste */
 .nav-item.dropdown .dropdown-item {
-    color: white;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Réduit l'espacement autour des éléments de la liste */
 }
 
+/* Réduire l'espacement lorsque l'élément est survolé */
 .nav-item.dropdown .dropdown-item:hover {
-    background-color: #0056b3; /* Couleur sur hover dans le menu déroulant */
+    background-color: #0056b3; /* Reste inchangé */
 }
+
 
 /* Espacement global */
 .container-fluid {

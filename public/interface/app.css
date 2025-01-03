@@ -1,13 +1,63 @@
 /* Corps de la page */
-body {
-    background-color: #f7f8fa;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+
+/* Jour */
+body.day-theme {
+    background: linear-gradient(to bottom, #5490cd, #1e90ff); /* Dégradé du bleu clair au bleu foncé */
+    color: #000;
 }
 
+/* Nuit */
+body.night-theme {
+    background: linear-gradient(to bottom, #103961, #174776); /* Dégradé de tons sombres pour la nuit */
+    color: #000;
+}
+
+/* Navbar */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+.navbar.day-theme {
+    background-color: #3498db;
+}
+.navbar.night-theme {
+    background-color: #34495e;
+}
+
+/* Bouton centré */
+.nav-item {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement si nécessaire */
+    height: 100%; /* Pour s'assurer que le bouton prend toute la hauteur disponible */
+}
+
+/* Style du bouton Jour/Nuit */
+#theme-toggle {
+    background-color: #f0f8ff; /* Couleur de fond par défaut (clair) */
+    border: none;
+    color: #000; /* Texte noir pour le thème clair */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Transition douce pour les changements */
+    cursor: pointer; /* Curseur de main pour indiquer que c'est cliquable */
+}
+
+#theme-toggle:hover {
+    background-color: #87ceeb; /* Couleur de fond lorsqu'on survole (bleu clair) */
+    color: #fff; /* Texte blanc lorsqu'on survole */
+    transform: scale(1.1); /* Agrandir légèrement le bouton lors du survol */
+}
+
+body.night-theme #theme-toggle {
+    background-color: #34495e; /* Couleur de fond pour le thème nuit */
+    color: #ecf0f1; /* Texte clair pour le thème nuit */
+}
+
+body.night-theme #theme-toggle:hover {
+    background-color: #2c3e50; /* Couleur plus sombre lors du survol dans le thème nuit */
+}
 
 /* Section à remplir toute la hauteur avec une belle transition */
 section {

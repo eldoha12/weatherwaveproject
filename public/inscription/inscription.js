@@ -24,7 +24,7 @@ document.querySelector('.signup-form').addEventListener('submit', async (e) => {
 
       if (response.ok) {
           alert('Inscription réussie');
-          window.location.href = "../index.html";  // Rediriger vers la page de connexion
+          window.location.href = "../interface/app.html";  // Rediriger vers la page de connexion
       } else {
           alert(data.message);  // Afficher l'erreur
       }

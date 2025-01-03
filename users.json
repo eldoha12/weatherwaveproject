@@ -10,5 +10,13 @@
   {
     "email": "youssef1m@weather.com",
     "password": "$2b$10$jjlgu3..ttqbtxtjSylRBuBsWSI2ztW10Y7RI2doI6p4jpiVHheOq"
+  },
+  {
+    "email": "karam.karam@weather.com",
+    "password": "$2b$10$qrR1PpVxphUDGe7uHRrS4..dDhyFOLEZUWcFzUk.vu4P.4/odb1Ki"
+  },
+  {
+    "email": "karym.karym@weather.com",
+    "password": "$2b$10$aM8jXgbChm6E6EOLhwYd/.1YAhkhMoVuU.wNdEt2n4IPnrGVSDlne"
   }
 ]

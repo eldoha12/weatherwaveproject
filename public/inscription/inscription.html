@@ -14,12 +14,21 @@
     </header>
     <form class="signup-form">
       <input type="text" id="name" placeholder="Nom complet" required>
+      <span class="error-message" style="display: none;"></span>
+    
       <input type="email" id="email" placeholder="Adresse email" required>
+      <span class="error-message" style="display: none;"></span>
+    
       <input type="password" id="password" placeholder="Mot de passe" required>
+      <span class="error-message" style="display: none;"></span>
+    
       <input type="password" id="confirm-password" placeholder="Confirmer le mot de passe" required>
+      <span class="error-message" style="display: none;"></span>
+    
       <button type="submit">S'inscrire</button>
       <p>Vous avez déjà un compte ? <a href="../connection/connection.html">Se connecter</a></p>
     </form>
+    
     <footer>
       <a href="./condit_polit/polit.html">Politique de confidentialité</a>
       <a href="./condit_polit/condition.html">Conditions générales</a>

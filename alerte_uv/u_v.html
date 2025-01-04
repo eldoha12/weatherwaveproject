@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerte UV</title>
+    <link rel="stylesheet" href="u_v.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🌤️ Alerte UV</h1>
+            <p class="description">Restez protégé ! Entrez une ville pour connaître l'indice UV actuel et obtenir des conseils personnalisés.</p>
+            <div class="input-container">
+                <input type="text" id="city-input" placeholder="Veuillez saisir votre Ville">
+                <button id="get-uv-alert">Rechercher</button>
+            </div>
+            <div id="uv-result" class="uv-result hidden">
+                <h2 id="city-name"></h2>
+                <p id="uv-index"></p>
+                <p id="uv-advice"></p>
+            </div>
+        </div>
+    </div>
+    <script src="u_v.js"></script>
+</body>
+</html>

@@ -1,22 +1,14 @@
 [
   {
-    "email": "o.mekouar@weather.com",
-    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG"
+    "email": "othman.mekouar@weather.com",
+    "password": "$2b$10$t8.bAl47OGE8Fy57aFVMDO1gitN6N7IncjUWfdlRj.qS7Vrj2TYqu"
   },
   {
-    "email": "d.elfadili@weather.com",
-    "password": "$2b$10$CmKutQ1k9B2wetXjSJYEeeVS.tJCR0U1AVrMs2IxetonH.UHafpLG"
+    "email": "doha.elfadili@weather.com",
+    "password": "$2b$10$K5u3S4JczSFi5HYDoLFaNeIL5WOqmTJVn1NACbnAAJSAHvfpa5Cvq"
   },
   {
-    "email": "youssef1m@weather.com",
-    "password": "$2b$10$jjlgu3..ttqbtxtjSylRBuBsWSI2ztW10Y7RI2doI6p4jpiVHheOq"
-  },
-  {
-    "email": "karam.karam@weather.com",
-    "password": "$2b$10$qrR1PpVxphUDGe7uHRrS4..dDhyFOLEZUWcFzUk.vu4P.4/odb1Ki"
-  },
-  {
-    "email": "karym.karym@weather.com",
-    "password": "$2b$10$aM8jXgbChm6E6EOLhwYd/.1YAhkhMoVuU.wNdEt2n4IPnrGVSDlne"
+    "email": "achraf.zerouali@weather.com",
+    "password": "$2b$10$bXQXyMN/dQ2h5BBz.8HYV.dSmpIAdXRhi5QpWhYqMrJZwsJ99T0q."
   }
 ]

@@ -1,58 +1,35 @@
-// Gestion de la soumission du formulaire
-document.querySelector('.signup-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Empêche la soumission par défaut
+document.querySelector('.signup-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-  const inputs = document.querySelectorAll('.signup-form input');
-  let valid = true;
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirm-password').value;
 
-  // Réinitialiser les erreurs
-  inputs.forEach(input => {
-    const error = input.nextElementSibling; // Supposant que l'élément suivant est un message d'erreur
-    if (error) error.style.display = 'none';
-    input.classList.remove('error');
-  });
-
-  // Vérifier que tous les champs sont remplis
-  inputs.forEach(input => {
-    if (input.value.trim() === '') {
-      showError(input, 'Ce champ est requis.');
-      valid = false;
-    }
-  });
-
-  // Validation de l'email
-  const email = document.querySelector('input[placeholder="Adresse email"]');
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email.value.trim())) {
-    showError(email, "L'adresse email est invalide.");
-    valid = false;
+  if (password !== confirmPassword) {
+      alert("Les mots de passe ne correspondent pas.");
+      return;
   }
 
-  // Validation des mots de passe
-  const password = document.querySelector('input[placeholder="Mot de passe"]');
-  const confirmPassword = document.querySelector('input[placeholder="Confirmer le mot de passe"]');
-  if (password.value.trim() !== confirmPassword.value.trim()) {
-    showError(confirmPassword, 'Les mots de passe ne correspondent pas.');
-    valid = false;
-  }
+  try {
+      const response = await fetch('http://localhost:4000/register', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password })
+      });
 
-  // Si tout est valide, afficher un message et rediriger
-  if (valid) {
-    alert('Inscription réussie !');
-    window.location.href = "../connection/connection.html"; // Redirection vers la page de connexion
+      const data = await response.json();
+
+      if (response.ok) {
+          alert('Inscription réussie');
+          window.location.href = "../interface/app.html";  // Rediriger vers la page de connexion
+      } else {
+          alert(data.message);  // Afficher l'erreur
+      }
+  } catch (error) {
+      console.error('Erreur:', error);
+      alert("Une erreur est survenue lors de l'inscription.");
   }
 });
-
-// Fonction pour afficher les messages d'erreur
-function showError(input, message) {
-  let error = input.nextElementSibling; // Supposant que l'élément suivant est le message d'erreur
-  if (!error || !error.classList.contains('error-message')) {
-    // Si l'élément suivant n'existe pas, on le crée
-    error = document.createElement('span');
-    error.classList.add('error-message');
-    input.parentNode.appendChild(error);
-  }
-  error.textContent = message;
-  error.style.display = 'block';
-  input.classList.add('error');
-}

@@ -10,5 +10,17 @@
   {
     "email": "achraf.zerouali@weather.com",
     "password": "$2b$10$bXQXyMN/dQ2h5BBz.8HYV.dSmpIAdXRhi5QpWhYqMrJZwsJ99T0q."
+  },
+  {
+    "email": "youssef.mekouar@weather.com",
+    "password": "$2b$10$18rgAtG7Gagp3FnENjnZkesUpDAKf0NFytLtH8CYWwbFGmVYvsocS"
+  },
+  {
+    "email": "youssef@weather.com",
+    "password": "$2b$10$SuhvvEzAgY/Uu2.ltcytkewGtWcSbqbikSUaKc9DpQOqoFI9fLXhG"
+  },
+  {
+    "email": "talia.talia@weatherwave.com",
+    "password": "$2b$10$4PeFFO7ut9DRVmEWvy9IquFj9yY5OBSkb0Zw1fLkuROXf4/Rk8N1."
   }
 ]

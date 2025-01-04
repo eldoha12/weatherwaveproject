@@ -1,0 +1,78 @@
+/* Reset de base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+    color: #333333;
+  }
+  
+  p {
+    color: #666666;
+    margin-bottom: 25px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .social-btn i {
+    margin-right: 10px;
+  }
+  
+  .facebook {
+    background-color: #3b5998;
+  }
+  
+  .facebook:hover {
+    background-color: #2d4373;
+  }
+  
+  .google {
+    background-color: #db4437;
+  }
+  
+  .google:hover {
+    background-color: #c23321;
+  }
+  
+  .twitter {
+    background-color: #1da1f2;
+  }
+  
+  .twitter:hover {
+    background-color: #0d95e8;
+  }
+  

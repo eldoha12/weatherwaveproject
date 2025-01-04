@@ -34,9 +34,13 @@ header {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00aaff;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* Ajuste la taille du logo selon tes préférences */
+    margin-right: 10px; /* Espace entre le logo et le texte */
 }
 
 .nav-links {
@@ -81,7 +85,7 @@ header {
 }
 
 .sign-out:hover {
-    background: #cc4b4b;
+    background: #0a61b9;
 }
 
 /* Video Section */
@@ -146,4 +150,36 @@ section a {
 
 section a:hover {
     text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espace entre les icônes */
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 60px; /* Icônes plus grandes */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
+}
+
+/* Icônes des réseaux sociaux */
+#contact .card-body .mt-4 {
+    display: flex;
+    justify-content: center; /* Centre horizontalement les icônes */
+    gap: 20px; /* Ajoute un espace de 20px entre les icônes */
+}
+
+#contact .fab {
+    font-size: 40px; /* Icônes plus grandes */
+    transition: all 0.3s ease;
+}
+
+#contact .fab:hover {
+    transform: scale(1.2); /* Effet de zoom au survol */
 }

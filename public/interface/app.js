@@ -38,3 +38,32 @@ async function getWeather() {
 document.addEventListener('DOMContentLoaded', () => {
     console.log("WeatherWave est prêt !");
 });
+
+
+const themeToggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+const navbar = document.querySelector(".navbar");
+
+// Vérifier le thème sauvegardé dans le localStorage
+if (localStorage.getItem("theme") === "night") {
+    body.classList.add("night-theme");
+    navbar.classList.add("night-theme");
+} else {
+    body.classList.add("day-theme");
+    navbar.classList.add("day-theme");
+}
+
+// Basculer entre le thème jour/nuit
+themeToggleButton.addEventListener("click", () => {
+    body.classList.toggle("night-theme");
+    body.classList.toggle("day-theme");
+    navbar.classList.toggle("night-theme");
+    navbar.classList.toggle("day-theme");
+
+    // Sauvegarder le thème choisi dans le localStorage
+    if (body.classList.contains("night-theme")) {
+        localStorage.setItem("theme", "night");
+    } else {
+        localStorage.setItem("theme", "day");
+    }
+});

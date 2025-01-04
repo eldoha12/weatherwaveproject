@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisation des Données Météo</title>
+  <link rel="stylesheet" href="v_m.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 Visualisation des Données Météo</h1>
+      <p>Analysez les prévisions météorologiques en graphiques interactifs.</p>
+    </header>
+    <main>
+      <form id="weatherForm">
+        <label for="city">Entrez une ville :</label>
+        <div class="input-group">
+          <input type="text" id="city" placeholder="Veuillez saisir Votre Ville" required>
+          <button type="submit">Rechercher</button>
+        </div>
+      </form>
+      <div id="charts" class="hidden">
+        <h2 id="cityName"></h2>
+        <canvas id="tempChart"></canvas>
+        <canvas id="humidityChart"></canvas>
+      </div>
+    </main>
+    <footer>
+      <p>© 2025 Weather App | Tous droits réservés</p>
+    </footer>
+  </div>
+  <script src="v_m.js"></script>
+</body>
+</html>

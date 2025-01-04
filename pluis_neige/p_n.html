@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévisions Pluie/Neige</title>
+    <link rel="stylesheet" href="p_n.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌦️ Prévisions de Pluie ou Neige ❄️</h1>
+        <p>Entrez le nom de votre ville pour connaître la durée prévue :</p>
+
+        <div class="input-container">
+            <input type="text" id="city-input" placeholder="Veuillez saisir une ville">
+            <button id="get-forecast">Obtenir les prévisions</button>
+        </div>
+
+        <div id="forecast-result" class="forecast-result">
+            <h2 id="city-name"></h2>
+            <p id="weather-duration"></p>
+        </div>
+    </div>
+
+    <script src="p_n.js"></script>
+</body>
+</html>

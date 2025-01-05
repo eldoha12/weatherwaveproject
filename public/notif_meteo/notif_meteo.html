@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendrier Météo</title>
+  <link rel="stylesheet" href="notif_meteo.css">
+</head>
+<body>
+  <div class="calendar-container">
+    <header>
+      <h1 id="month-year"></h1>
+      <div class="nav-buttons">
+        <button id="prev-month">◀</button>
+        <button id="next-month">▶</button>
+      </div>
+    </header>
+    <div class="calendar">
+      <div class="days-of-week">
+        <div>Lun</div>
+        <div>Mar</div>
+        <div>Mer</div>
+        <div>Jeu</div>
+        <div>Ven</div>
+        <div>Sam</div>
+        <div>Dim</div>
+      </div>
+      <div id="calendar-days"></div>
+    </div>
+  </div>
+
+  
+  <div id="event-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Ajouter un événement</h2>
+      <p id="selected-date"></p>
+      <input type="text" id="event-input" placeholder="Titre de l'événement">
+      <button id="save-event">Sauvegarder</button>
+      <button id="close-modal">Annuler</button>
+    </div>
+  </div>
+
+  <script src="notif_meteo.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Styles pour la page d'erreur 404 */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-content {
+    max-width: 600px;
+}
+
+.error-code {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #e0e0e0;
+}
+
+.clouds {
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cloud {
+    width: 100px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: float 4s infinite ease-in-out;
+}
+
+.cloud:nth-child(2) {
+    width: 120px;
+    height: 70px;
+    animation-delay: 1s;
+}
+
+.cloud:nth-child(3) {
+    width: 140px;
+    height: 80px;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.home-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    background: #ff6f61;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-button:hover {
+    background: #d9534f;
+}

@@ -79,6 +79,7 @@ Vous pouvez vérifier leur installation avec les commandes suivantes :
 Installez les dépendances du backend :
    ```bash
    npm install express express-session body-parser bcrypt nodemon
+   npm install nodemailer
    ```
 Lancer le backend :
    ```bash

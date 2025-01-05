@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparaison Météo</title>
+  <link rel="stylesheet" href="compare.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Comparer la météo de deux villes</h1>
+    <form id="formulaireVilles">
+      <input type="text" id="ville1" placeholder="Entrez la première ville" required>
+      <input type="text" id="ville2" placeholder="Entrez la deuxième ville" required>
+      <button type="submit">Comparer</button>
+    </form>
+    <div class="resultats">
+      <div id="ville1Data" class="ville-donnees">
+        <h2>Ville 1</h2>
+        <p>Conditions : <span id="meteo1">-</span></p>
+        <p>Température : <span id="temp1">-</span></p>
+        <p>Humidité : <span id="hum1">-</span></p>
+      </div>
+      <div id="ville2Data" class="ville-donnees">
+        <h2>Ville 2</h2>
+        <p>Conditions : <span id="meteo2">-</span></p>
+        <p>Température : <span id="temp2">-</span></p>
+        <p>Humidité : <span id="hum2">-</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="compare.js"></script>
+</body>
+</html>

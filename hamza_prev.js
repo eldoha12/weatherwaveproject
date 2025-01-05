@@ -1,5 +1,5 @@
 // script.js
-const apiKey = "82f9f4a18e150ac07c1db29c4a55410a"; // Remplacez par votre clé OpenWeather
+const apiKey = "82f9f4a18e150ac07c1db29c4a55410a"; 
 const weatherInfo = document.getElementById("weather-info");
 const shareLink = document.getElementById("share-link");
 

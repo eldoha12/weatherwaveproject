@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prévision des Allergies Saisonnières</title>
+  <link rel="stylesheet" href="hamza_pred.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <h1>🌼 Prévision des Allergies</h1>
+    <div class="search-container">
+      <input type="text" id="city-input" placeholder="Entrez une ville..." />
+      <button id="search-btn">🔍 Prévoir</button>
+    </div>
+    <div class="results-container">
+      <h2 id="city-name">Ville : --</h2>
+      <p><strong>Risque d'allergie :</strong> <span id="allergy-risk">--%</span></p>
+      <p><strong>Type de pollen dominant :</strong> <span id="pollen-type">--</span></p>
+    </div>
+    <canvas id="allergy-chart" width="400" height="200"></canvas>
+  </div>
+  <script src="hamza_pred.js"></script>
+</body>
+</html>

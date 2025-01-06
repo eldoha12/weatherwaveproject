@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo pour la Croissance des Plantes</title>
+  <link rel="stylesheet" href="hamza_croi.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <h1>🌱 Croissance des Plantes</h1>
+    <div class="search-section">
+      <input type="text" id="location-input" placeholder="Entrez une ville ou un lieu..." />
+      <button id="search-btn">🔍 Analyser</button>
+    </div>
+    <div class="results-container">
+      <h2 id="location-name">Lieu : --</h2>
+      <p><strong>Température moyenne :</strong> <span id="temperature">--°C</span></p>
+      <p><strong>Humidité :</strong> <span id="humidity">--%</span></p>
+      <p><strong>Ensoleillement :</strong> <span id="sunlight">-- heures/jour</span></p>
+      <p><strong>Recommandation :</strong> <span id="recommendation">--</span></p>
+    </div>
+    <canvas id="plant-growth-chart" width="400" height="200"></canvas>
+  </div>
+  <script src="hamza_croi.js"></script>
+</body>
+</html>

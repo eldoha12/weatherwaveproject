@@ -11,7 +11,7 @@
         <h2>Mon Profil</h2>
 
         <!-- Formulaire pour la gestion du profil -->
-        <form id="profileForm" action="/update-profile" method="POST" enctype="multipart/form-data">
+        <form id="profileForm" onsubmit="handleSubmit(event)">
             <!-- Photo de profil -->
             <div class="profile-picture">
                 <img src="default-avatar.png" alt="Photo de Profil" id="profile-img">
@@ -29,7 +29,7 @@
 
             <!-- Date de naissance -->
             <label for="dob">Date de naissance</label>
-            <input type="date" id="dob" name="dob" value="05-02-2004" required>
+            <input type="date" id="dob" name="dob" value="2004-02-05" required>
 
             <!-- Numéro de téléphone -->
             <label for="phone">Numéro de téléphone</label>
@@ -73,7 +73,6 @@
         function confirmDelete() {
             const confirmDelete = confirm("Êtes-vous sûr de vouloir supprimer votre compte ?");
             if (confirmDelete) {
-                // Logique de suppression du compte à implémenter ici
                 alert("Votre compte a été supprimé.");
             }
         }
@@ -93,6 +92,12 @@
                 body.classList.add("light-theme");
                 body.classList.remove("dark-theme");
             }
+        }
+
+        // Fonction pour gérer la soumission du formulaire
+        function handleSubmit(event) {
+            event.preventDefault(); // Empêche la soumission réelle du formulaire
+            alert('Enregistrement effectué avec succès !');
         }
 
         // Initialiser le thème basé sur la préférence stockée

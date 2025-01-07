@@ -208,6 +208,15 @@ footer p {
 #about-us .description {
     flex: 1; /* Permet à la description de prendre tout l'espace restant */
 }
+.description{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.description .fs-6 {
+    color: rgb(0, 153, 255);
+    font-size: 23px !important; /* Ajoutez !important pour forcer l'application */
+    font-style: oblique;
+}
+
 
 /* Responsivité */
 @media (max-width: 767px) {

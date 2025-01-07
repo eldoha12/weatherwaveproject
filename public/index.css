@@ -36,12 +36,12 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    margin-left: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px; 
 }
 
-.logo-img {
-    width: 40px; /* Ajuste la taille du logo selon tes préférences */
-    margin-right: 10px; /* Espace entre le logo et le texte */
-}
+
 
 .nav-links {
     list-style: none;
@@ -52,8 +52,9 @@ header {
 .nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 20px;
     transition: color 0.3s ease;
+
 }
 
 .nav-links li a:hover {

@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  color: #4CAF50;
+  color: #4c95af;
 }
 
 #weather-info {
@@ -34,14 +34,14 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #2e5ca6;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #1e598f;
 }
 
 #result {

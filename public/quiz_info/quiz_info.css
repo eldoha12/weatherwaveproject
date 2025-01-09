@@ -56,12 +56,12 @@ h1 {
 }
 
 .link-button:hover {
-    background-color: #45a049;
+    background-color: #2f6b98;
     transform: scale(1.05);
 }
 
 .link-button:active {
-    background-color: #3e8e41;
+    background-color: #1a6a8d;
 }
 
 /* Mobile Responsiveness */

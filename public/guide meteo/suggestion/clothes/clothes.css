@@ -27,7 +27,7 @@ h1, h2 {
     padding: 10px 20px;
     margin: 10px;
     font-size: 1em;
-    background-color: #4CAF50;
+    background-color: #1f85b1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -35,7 +35,7 @@ h1, h2 {
 }
 
 #gender-selection button:hover {
-    background-color: #45a049;
+    background-color: #14708f;
 }
 
 #weather-display {
@@ -81,7 +81,7 @@ h1, h2 {
 .back-button {
     display: inline-block;
     margin-top: 30px;
-    background-color: #4CAF50;
+    background-color: #18728b;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -89,9 +89,9 @@ h1, h2 {
 }
 
 .back-button:hover {
-    background-color: #45a049;
+    background-color: #1e8e96;
 }
 
 .back-button:active {
-    background-color: #388e3c;
+    background-color: #1a75b1;
 }

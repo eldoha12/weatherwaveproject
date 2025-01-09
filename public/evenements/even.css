@@ -1,57 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #eef2f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .event-container {
-    text-align: center;
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #eef2f3; /* Couleur douce et apaisante */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.weather-container {
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #f9fafc);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #2b88d8;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.button {
+  text-decoration: none;
+  padding: 12px 20px;
+  background: #3a8ff3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(58, 143, 243, 0.2);
+}
+
+.button:hover {
+  background: #327ad8;
+  box-shadow: 0 6px 20px rgba(50, 122, 216, 0.3);
+  transform: scale(1.05);
+}
+
+.button:active {
+  background: #285eaa;
+  box-shadow: 0 3px 8px rgba(40, 94, 170, 0.2);
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .weather-container {
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
-    width: 100%;
   }
-  
+
   h1 {
-    color: #3498db;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
+
   p {
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 1rem;
   }
-  
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
+
   .button {
-    display: block;
-    text-decoration: none;
-    padding: 15px 30px;
-    background-color: #3498db;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
   }
-  
-  .button:hover {
-    background-color: #2980b9;
-  }
-  
+}

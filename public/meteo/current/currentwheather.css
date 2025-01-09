@@ -60,7 +60,7 @@ header h1 {
   padding: 12px 20px;
   border-radius: 8px;
   border: none;
-  background: #27ae60;
+  background: #2793ae;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -69,7 +69,7 @@ header h1 {
 }
 
 .search-bar button:hover {
-  background: #2ecc71;
+  background: #2e92cc;
 }
 
 /* Carte météo */
